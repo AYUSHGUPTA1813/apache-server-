@@ -1,0 +1,3 @@
+[Sat Dec 05 10:12:34.123456 2025] [mpm_winnt:notice] [pid 1234:tid 5678] AH00455: Apache/2.4.51 (Win64) configured -- resuming normal operations
+[Sat Dec 05 10:14:01.654321 2025] [ssl:warn] [pid 1234:tid 5678] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Sat Dec 05 10:15:12.987654 2025] [core:crit] [pid 1234:tid 5678] (13)Permission denied: AH00035: access to C:/Apache24/htdocs/site1 denied

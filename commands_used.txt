@@ -1,0 +1,27 @@
+# Key commands used during setup
+
+# Apache service
+httpd -k install
+httpd -k start
+httpd -k restart
+httpd -k stop
+
+# Netstat to find ports
+netstat -ano | findstr :80
+netstat -ano | findstr :443
+
+# Firewall (examples)
+netsh advfirewall firewall add rule name="Apache HTTP" dir=in action=allow protocol=TCP localport=80
+netsh advfirewall firewall add rule name="Apache HTTPS" dir=in action=allow protocol=TCP localport=443
+
+# Supervisor (Linux example - not for Windows)
+# systemctl restart supervisor
+
+# OpenSSL sample commands
+openssl genrsa -out site1.key 2048
+openssl req -new -key site1.key -out site1.csr
+openssl x509 -req -days 365 -in site1.csr -signkey site1.key -out site1.crt
+
+# Starting/stopping Apache service (Windows)
+net start Apache24
+net stop Apache24
